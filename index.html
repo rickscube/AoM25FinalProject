@@ -12,14 +12,14 @@
     <style>
         :root {
             /* --- WashU Color Palette --- */
-            --washu-red: #a51417;     /* Official Red */
-            --washu-green: #2c5234;   /* Official Dark Green */
+            --washu-red: #a51417;     
+            --washu-green: #2c5234;   
             --washu-white: #ffffff;
-            --washu-grey: #f0f0f0;    /* Light grey for text/accents */
+            --washu-grey: #f0f0f0;    
             
             /* Theme Backgrounds */
-            --bg-dark: #1a1a1a;       /* Main Background */
-            --card-bg: #262626;       /* Card Background */
+            --bg-dark: #1a1a1a;       
+            --card-bg: #262626;       
             
             /* Typography */
             --font-display: 'Cinzel', serif;
@@ -75,7 +75,7 @@
         header h1 { 
             font-size: 3.5rem; 
             margin-bottom: 1.5rem; 
-            text-shadow: 0 4px 10px rgba(165, 20, 23, 0.4); /* Red Glow */
+            text-shadow: 0 4px 10px rgba(165, 20, 23, 0.4); 
         }
 
         /* --- Timeline Container --- */
@@ -86,12 +86,11 @@
             padding: 80px 20px;
         }
 
-        /* Vertical Line */
         .timeline::after {
             content: '';
             position: absolute;
             width: 4px;
-            background: var(--washu-green); /* Green Spine */
+            background: var(--washu-green); 
             top: 0;
             bottom: 0;
             left: 50%;
@@ -115,14 +114,13 @@
         .left { left: 0; }
         .right { left: 50%; }
 
-        /* Timeline Nodes (Circles) */
         .container::after {
             content: '';
             position: absolute;
             width: 20px;
             height: 20px;
             right: -10px;
-            background-color: var(--washu-red); /* Red Nodes */
+            background-color: var(--washu-red); 
             border: 3px solid var(--washu-white);
             top: 45px;
             border-radius: 50%;
@@ -134,7 +132,7 @@
         .content {
             padding: 25px;
             background-color: var(--card-bg);
-            border-top: 4px solid var(--washu-red); /* Red Top Border */
+            border-top: 4px solid var(--washu-red); 
             border-radius: 2px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             position: relative;
@@ -163,7 +161,7 @@
         .image-slot img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures image fills box without stretching */
+            object-fit: cover; 
             opacity: 0.8;
             transition: opacity 0.3s;
         }
@@ -185,7 +183,7 @@
         }
 
         .diagnosis-box {
-            background: rgba(44, 82, 52, 0.2); /* Tint of WashU Green */
+            background: rgba(44, 82, 52, 0.2); 
             padding: 15px;
             border-left: 3px solid var(--washu-green);
             margin-top: 15px;
@@ -207,7 +205,7 @@
         /* --- FICTIONAL / FUTURE CASE --- */
         .fictional-case .content {
             border-top: 4px solid var(--washu-green);
-            background: #0d1f12; /* Very dark green bg */
+            background: #0d1f12; 
         }
         
         .fictional-case h2 { color: var(--washu-green); text-shadow: 0 0 5px rgba(44,82,52,0.8); }
@@ -226,7 +224,7 @@
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 1000;
             display: none;
             justify-content: center;
@@ -247,6 +245,7 @@
         }
 
         .modal-content h2 { font-size: 2rem; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .modal-content h3 { font-family: var(--font-display); color: var(--washu-green); margin-top: 20px; }
         .modal-content p { margin-top: 15px; color: #ddd; }
 
         .close-btn {
@@ -280,122 +279,122 @@
         <path d="M12 2L2 12l10 10 10-10L12 2z"></path>
     </svg>
     <h1>Museum of<br>Medical Misinterpretations</h1>
-    <div class="placard-text">"Certainty is the most dangerous diagnosis."</div>
+    <div class="placard-text">"The history of medicine is a history of being confident, being wrong, and learning slowly."</div>
 </header>
 
 <main class="timeline">
 
     <div class="container left" onclick="openModal(this)">
         <article class="content">
-            <span class="era-badge">ANCIENT ERA</span>
+            <span class="era-badge">ANTIQUITY - 1831</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/2c5234/FFF?text=Ancient+Scroll" alt="Ancient Text">
+                <img src="https://placehold.co/600x400/2c5234/FFF?text=The+Four+Humors" alt="Diagram of the four humors">
             </div>
 
-            <h2>The Wandering Womb</h2>
-            <p><strong>The Belief:</strong> The uterus was an animal that roamed the body.</p>
+            <h2>The Balanced Fluid</h2>
+            <p><strong>The Belief:</strong> Health relies on the balance of four fluids: blood, phlegm, yellow bile, and black bile.</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Anxiety, infection, or normal physiology.</p>
+                <p><strong>Reality:</strong> Pathology is anchored in organs, not fluid imbalance.</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
             
             <div class="extended-details">
-                <h3>Archival Note: Scent Therapy</h3>
-                <p>To treat this, physicians used "fumigation." They placed foul-smelling substances under a woman's nose to drive the uterus down, and sweet-smelling ones between her legs to attract it back to position.</p>
-                <p>This theory cemented "Hysteria" (from Greek <em>hystera</em>) as a medical validity for centuries.</p>
+                <h3>Archival Note: The Coal Miner's Leeches</h3>
+                <p>Originating with Galen (129-216 AD), this theory dominated medicine for 2,000 years. Physicians believed illness was merely fluids "out of balance."</p>
+                <p><strong>The Persistence of Error:</strong> Even in 1831, after the discovery of anatomical pathology, Dr. James Craufurd Gregory treated a coal miner's lung disease with leeches. Why? Because while he could <em>diagnose</em> the organ damage, he had no tools to treat it, so he fell back on the obsolete "humoral" cure to provide "some relief."</p>
             </div>
         </article>
     </div>
 
     <div class="container right" onclick="openModal(this)">
         <article class="content">
-            <span class="era-badge">MEDIEVAL ERA</span>
+            <span class="era-badge">1630 CE</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/a51417/FFF?text=Plague+Mask" alt="Plague Mask">
+                <img src="https://placehold.co/600x400/a51417/FFF?text=The+Anointers" alt="Etching of the Milan Plague">
             </div>
 
-            <h2>The Corruption of Air</h2>
-            <p><strong>The Belief:</strong> "Miasma" (bad smells) caused the plague.</p>
+            <h2>The Simulated Plague</h2>
+            <p><strong>The Belief:</strong> The plague in Milan was a "simulated" hoax caused by "Anointers" smearing poison on walls.</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Bacteria (Y. pestis) on fleas.</p>
+                <p><strong>Reality:</strong> <i>Yersinia pestis</i> (Bubonic Plague).</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
 
             <div class="extended-details">
-                <h3>Archival Note: The Beak Mask</h3>
-                <p>The iconic plague mask was functional design: the beak was stuffed with rose petals and camphor to filter the "bad air."</p>
-                <p>Ironically, while the theory was wrong, the focus on smell led to better sewage management, inadvertently reducing the rat population.</p>
+                <h3>Archival Note: The Yellow Filth Conspiracy</h3>
+                <p>During the 1630 outbreak in Milan, citizens refused to believe in the disease. When yellow streaks appeared on doors and benches, mass hysteria erupted, blaming "Untori" (anointers) for spreading poison as part of a foreign plot.</p>
+                <p><strong>The Cost of Denial:</strong> To force the public to accept reality, the Board of Health eventually ordered the naked corpses of an entire family to be carted through the crowded streets during the festival of Pentecost.</p>
             </div>
         </article>
     </div>
 
     <div class="container left" onclick="openModal(this)">
         <article class="content">
-            <span class="era-badge">VICTORIAN ERA</span>
+            <span class="era-badge">1770 - 1791</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/333/FFF?text=Anatomy+Sketch" alt="Phrenology Head">
+                <img src="https://placehold.co/600x400/333/FFF?text=Facial+Angle+Theory" alt="Petrus Camper Facial Angle">
             </div>
 
-            <h2>Drapetomania</h2>
-            <p><strong>The Belief:</strong> The desire for freedom was a mental illness.</p>
+            <h2>The Fabricated Angle</h2>
+            <p><strong>The Belief:</strong> The "Facial Angle" proves Europeans are biologically superior to other races.</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Scientific Racism.</p>
+                <p><strong>Reality:</strong> Scientific Racism / Manipulated Data.</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
 
             <div class="extended-details">
-                <h3>Archival Note: Medicalizing Control</h3>
-                <p>Dr. Samuel Cartwright defined "Drapetomania" as a disease of the mind causing enslaved people to flee. The prescribed treatment was "whipping the devil out of them."</p>
-                <p><strong>Lesson:</strong> Science often bends to confirm existing power structures.</p>
+                <h3>Archival Note: The Missing Monkey</h3>
+                <p>Dutch anatomist Petrus Camper claimed that a steeper "facial angle" indicated beauty and intelligence, placing Europeans at the top and Africans closer to apes.</p>
+                <p><strong>The Deception:</strong> Camper’s original sketches included a "death's head monkey" (squirrel monkey) which had a facial angle of 50 degrees—too close to humans for his theory to work. In his final publication, he swapped it for an Orangutan to make the racist hierarchy appear scientifically "smooth."</p>
             </div>
         </article>
     </div>
 
     <div class="container right" onclick="openModal(this)">
         <article class="content">
-            <span class="era-badge">MODERNIST ERA</span>
+            <span class="era-badge">1854 CE</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/555/FFF?text=Surgical+Tool" alt="Surgical Tool">
+                <img src="https://placehold.co/600x400/555/FFF?text=The+Broad+St+Pump" alt="John Snow Map">
             </div>
 
-            <h2>The Ice Pick Cure</h2>
-            <p><strong>The Belief:</strong> Severing the brain cures personality defects.</p>
+            <h2>The Broad Street Pump</h2>
+            <p><strong>The Belief:</strong> Cholera is spread by "Miasma" (bad airs) and vapors.</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Permanent brain damage (Lobotomy).</p>
+                <p><strong>Reality:</strong> Waterborne Bacteria (Cholera).</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
 
             <div class="extended-details">
-                <h3>Archival Note: The Lobotomobile</h3>
-                <p>Dr. Walter Freeman performed transorbital lobotomies (via the eye socket) in a traveling van. He won a Nobel Prize for the procedure in 1949.</p>
-                <p>It left thousands, including Rosemary Kennedy, incapacitated.</p>
+                <h3>Archival Note: The Map as Evidence</h3>
+                <p>Victorian London believed "bad air" caused disease. Physician John Snow defied this by mapping cholera cases in the West End, finding they clustered around a single water pump on Broad Street.</p>
+                <p><strong>The Intervention:</strong> Snow didn't just treat patients; he removed the handle of the pump. This moment marked the shift from vague environmental theories to modern epidemiology.</p>
             </div>
         </article>
     </div>
 
     <div class="container left" onclick="openModal(this)">
         <article class="content">
-            <span class="era-badge">CONTEMPORARY</span>
+            <span class="era-badge">1900 - 1950s</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/a51417/FFF?text=EKG+Chart" alt="Heart Monitor">
+                <img src="https://placehold.co/600x400/a51417/FFF?text=The+Vibrating+Cure" alt="Antique Vibrator Ad">
             </div>
 
-            <h2>The "Yentl Syndrome"</h2>
-            <p><strong>The Belief:</strong> Heart attacks always look like crushing chest pain.</p>
+            <h2>The Catch-All Diagnosis</h2>
+            <p><strong>The Belief:</strong> "Hysteria" (from the Greek for uterus) causes female emotional volatility.</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Female presentation differs (nausea, fatigue).</p>
+                <p><strong>Reality:</strong> Systemic sexism in medical diagnostics.</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
 
             <div class="extended-details">
-                <h3>Archival Note: The Male Default</h3>
-                <p>Until 1993, women of childbearing age were excluded from clinical trials. Heart attack symptoms were defined by male biology.</p>
-                <p>Women presenting with nausea or jaw pain are often discharged with anti-anxiety meds while in cardiac arrest.</p>
+                <h3>Archival Note: From Massage to Machine</h3>
+                <p>For centuries, women's medical complaints were dismissed as "Hysteria." Galen originally prescribed marriage or pelvic massage by a midwife to "calm" the womb. By the late 19th century, doctors sought efficiency.</p>
+                <p><strong>The Invention:</strong> Dr. J. Mortimer Granville invented the electromechanical vibrator not for pleasure, but as a medical tool to induce "hysterical paroxysm" (orgasm) to relieve symptoms more quickly in a clinical setting.</p>
             </div>
         </article>
     </div>
@@ -463,11 +462,13 @@
         
         // Dynamic Border color for Future case
         if (element.classList.contains('fictional-case')) {
-            modalContent.style.borderColor = '#2c5234'; // Green border
+            modalContent.style.borderColor = '#2c5234'; 
             modalContent.querySelector('h2').style.color = '#2c5234';
+            modalContent.querySelector('h3').style.color = '#2c5234';
         } else {
-            modalContent.style.borderColor = '#a51417'; // Red border
+            modalContent.style.borderColor = '#a51417'; 
             modalContent.querySelector('h2').style.color = '#a51417';
+            modalContent.querySelector('h3').style.color = '#2c5234';
         }
 
         modal.style.display = 'flex';
