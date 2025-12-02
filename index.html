@@ -136,6 +136,27 @@
             z-index: 1;
         }
         .right::after { left: -10px; }
+        
+        /* --- Time Labels on Opposite Side --- */
+        .time-label {
+            position: absolute;
+            top: 45px;
+            font-family: var(--font-display);
+            color: var(--washu-green);
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 2;
+        }
+        
+        .left .time-label {
+            right: -180px;
+            text-align: left;
+        }
+        
+        .right .time-label {
+            left: -180px;
+            text-align: right;
+        }
 
         /* --- Card Content --- */
         .content {
@@ -223,6 +244,8 @@
         .fictional-case h2 { color: var(--washu-green); text-shadow: 0 0 5px rgba(44,82,52,0.8); }
         .fictional-case .era-badge { background-color: var(--washu-white); color: var(--washu-green); }
         .fictional-case .diagnosis-box { background: rgba(0,0,0,0.5); border-left-color: var(--washu-white); }
+        .fictional-case .time-label { color: var(--washu-green); }
+
 
         /* --- Footer --- */
         footer {
@@ -293,6 +316,7 @@
             .left::after { left: 21px; }
             .right { left: 0%; }
             header h1 { font-size: 2.2rem; }
+            .time-label { display: none; } /* Hide time labels on small screens */
         }
     </style>
 </head>
@@ -310,6 +334,7 @@
 <main class="timeline">
 
     <div class="container left" onclick="openModal(this)">
+        <div class="time-label">c. 400 BCE - 1800s CE</div>
         <article class="content">
             <span class="era-badge">ANTIQUITY - 1831</span>
             
@@ -333,6 +358,7 @@
     </div>
 
     <div class="container right" onclick="openModal(this)">
+        <div class="time-label">1630 CE</div>
         <article class="content">
             <span class="era-badge">1630 CE</span>
             
@@ -356,6 +382,7 @@
     </div>
 
     <div class="container left" onclick="openModal(this)">
+        <div class="time-label">1770 - 1790s CE</div>
         <article class="content">
             <span class="era-badge">1770 - 1791</span>
             
@@ -379,6 +406,7 @@
     </div>
 
     <div class="container right" onclick="openModal(this)">
+        <div class="time-label">1854 CE</div>
         <article class="content">
             <span class="era-badge">1854 CE</span>
             
@@ -402,29 +430,31 @@
     </div>
 
     <div class="container left" onclick="openModal(this)">
+        <div class="time-label">Late 20th Century - Present</div>
         <article class="content">
-            <span class="era-badge">1900 - 1950s</span>
+            <span class="era-badge">1980s - PRESENT</span>
             
             <div class="image-slot">
-                <img src="https://m.media-amazon.com/images/I/61V-gxkTkyL._AC_UF1000,1000_QL80_.jpg" alt="Antique Vibrator">
+                <img src="https://m.media-amazon.com/images/I/61V-gxkTkyL._AC_UF1000,1000_QL80_.jpg" alt="Brain Scan Illustration">
             </div>
 
-            <h2>The Catch-All Diagnosis</h2>
-            <p><strong>The Belief:</strong> "Hysteria" (from the Greek for uterus) causes female emotional volatility.</p>
+            <h2>The Overlooked Medical Cause</h2>
+            <p><strong>The Belief:</strong> Symptoms of inattention and hyperactivity are solely a behavioral or psychiatric disorder (ADHD).</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Systemic sexism in medical diagnostics.</p>
+                <p><strong>Reality:</strong> Underlying medical conditions mimicking ADHD symptoms.</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
 
             <div class="extended-details">
-                <h3>Archival Note: From Massage to Machine</h3>
-                <p>For centuries, women's medical complaints were dismissed as "Hysteria." Galen originally prescribed marriage or pelvic massage by a midwife to "calm" the womb. By the late 19th century, doctors sought efficiency.</p>
-                <p><strong>The Invention:</strong> Dr. J. Mortimer Granville invented the electromechanical vibrator not for pleasure, but as a medical tool to induce "hysterical paroxysm" (orgasm) to relieve symptoms more quickly in a clinical setting.</p>
+                <h3>Archival Note: The "Pure" ADHD Diagnosis</h3>
+                <p>ADHD is often diagnosed based on behavioral criteria alone, without a thorough medical evaluation. This can lead to misdiagnosis when underlying medical conditions are the true cause of symptoms.</p>
+                <p><strong>The Consequence:</strong> Conditions like sleep apnea, thyroid disorders, and lead toxicity can mimic ADHD. Treating these as "pure" ADHD with stimulants can be ineffective or harmful, delaying proper treatment for the root medical cause. A comprehensive evaluation must rule out other medical explanations.</p>
             </div>
         </article>
     </div>
 
     <div class="container right fictional-case" onclick="openModal(this)">
+        <div class="time-label">2088 CE</div>
         <article class="content">
             <span class="era-badge">FUTURE / 2088</span>
             
