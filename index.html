@@ -58,6 +58,15 @@
             display: inline-block;
         }
         
+        .curator-tag {
+            font-family: var(--font-tech);
+            color: var(--washu-green);
+            font-size: 0.8rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         /* --- Header --- */
         header {
             min-height: 85vh;
@@ -148,7 +157,7 @@
         /* --- Image Slot Styling --- */
         .image-slot {
             width: 100%;
-            height: 200px;
+            height: 250px; 
             background-color: #000;
             margin-bottom: 15px;
             overflow: hidden;
@@ -162,11 +171,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover; 
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            opacity: 0.9;
+            transition: opacity 0.3s, transform 0.5s;
         }
         
-        .content:hover .image-slot img { opacity: 1; }
+        .content:hover .image-slot img { 
+            opacity: 1; 
+            transform: scale(1.05);
+        }
 
         .era-badge {
             font-family: var(--font-display);
@@ -244,19 +256,31 @@
             position: relative;
         }
 
+        /* Modal Image Styling */
+        #modalImage {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin-bottom: 25px;
+            border: 1px solid #444;
+            background: #000;
+            display: block;
+        }
+
         .modal-content h2 { font-size: 2rem; border-bottom: 1px solid #444; padding-bottom: 10px; }
         .modal-content h3 { font-family: var(--font-display); color: var(--washu-green); margin-top: 20px; }
         .modal-content p { margin-top: 15px; color: #ddd; }
 
         .close-btn {
             position: absolute;
-            top: 15px;
+            top: 10px;
             right: 20px;
-            font-size: 2rem;
+            font-size: 3rem;
             color: var(--washu-white);
             cursor: pointer;
             background: none;
             border: none;
+            z-index: 10;
         }
 
         .extended-details { display: none; }
@@ -280,6 +304,7 @@
     </svg>
     <h1>Museum of<br>Medical Misinterpretations</h1>
     <div class="placard-text">"The history of medicine is a history of being confident, being wrong, and learning slowly."</div>
+    <div class="curator-tag">Created by Rick Rong</div>
 </header>
 
 <main class="timeline">
@@ -289,7 +314,7 @@
             <span class="era-badge">ANTIQUITY - 1831</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/2c5234/FFF?text=The+Four+Humors" alt="Diagram of the four humors">
+                <img src="https://cdn.thecollector.com/wp-content/uploads/2024/11/what-is-four-humors-theory.jpg" alt="The Four Humors">
             </div>
 
             <h2>The Balanced Fluid</h2>
@@ -301,8 +326,8 @@
             
             <div class="extended-details">
                 <h3>Archival Note: The Coal Miner's Leeches</h3>
-                <p>Originating with Galen (129-216 AD), this theory dominated medicine for 2,000 years. Physicians believed illness was merely fluids "out of balance."</p>
-                <p><strong>The Persistence of Error:</strong> Even in 1831, after the discovery of anatomical pathology, Dr. James Craufurd Gregory treated a coal miner's lung disease with leeches. Why? Because while he could <em>diagnose</em> the organ damage, he had no tools to treat it, so he fell back on the obsolete "humoral" cure to provide "some relief."</p>
+                <p>Originating with Galen (129-216 AD), this theory dominated medicine for 2,000 years. Physicians believed illness was merely fluids "out of balance".</p>
+                <p><strong>The Persistence of Error:</strong> Even in 1831, after the discovery of anatomical pathology, Dr. James Craufurd Gregory treated a coal miner's lung disease with leeches. Why? Because while he could <em>diagnose</em> the organ damage, he had no tools to treat it, so he fell back on the obsolete "humoral" cure to provide "some relief".</p>
             </div>
         </article>
     </div>
@@ -312,7 +337,7 @@
             <span class="era-badge">1630 CE</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/a51417/FFF?text=The+Anointers" alt="Etching of the Milan Plague">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Melchiorre_Gherardini%2C_Piazza_di_S._Babila_durante_la_peste_del_1630.jpg" alt="Etching of the Milan Plague">
             </div>
 
             <h2>The Simulated Plague</h2>
@@ -335,7 +360,7 @@
             <span class="era-badge">1770 - 1791</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/333/FFF?text=Facial+Angle+Theory" alt="Petrus Camper Facial Angle">
+                <img src="https://images.fineartamerica.com/images-medium-large/1760a-petrus-camper-facial-angle-eugenics-paul-d-stewart.jpg" alt="Petrus Camper Facial Angle">
             </div>
 
             <h2>The Fabricated Angle</h2>
@@ -348,7 +373,7 @@
             <div class="extended-details">
                 <h3>Archival Note: The Missing Monkey</h3>
                 <p>Dutch anatomist Petrus Camper claimed that a steeper "facial angle" indicated beauty and intelligence, placing Europeans at the top and Africans closer to apes.</p>
-                <p><strong>The Deception:</strong> Camper’s original sketches included a "death's head monkey" (squirrel monkey) which had a facial angle of 50 degrees—too close to humans for his theory to work. In his final publication, he swapped it for an Orangutan to make the racist hierarchy appear scientifically "smooth."</p>
+                <p><strong>The Deception:</strong> Camper’s original sketches included a "death's head monkey" (squirrel monkey) which had a facial angle of 50 degrees—too close to humans for his theory to work. In his final publication, he swapped it for an Orangutan to make the racist hierarchy appear scientifically "smooth".</p>
             </div>
         </article>
     </div>
@@ -381,7 +406,7 @@
             <span class="era-badge">1900 - 1950s</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/a51417/FFF?text=The+Vibrating+Cure" alt="Antique Vibrator Ad">
+                <img src="https://m.media-amazon.com/images/I/61V-gxkTkyL._AC_UF1000,1000_QL80_.jpg" alt="Antique Vibrator">
             </div>
 
             <h2>The Catch-All Diagnosis</h2>
@@ -401,23 +426,23 @@
 
     <div class="container right fictional-case" onclick="openModal(this)">
         <article class="content">
-            <span class="era-badge">FUTURE / 2084</span>
+            <span class="era-badge">FUTURE / 2088</span>
             
             <div class="image-slot">
-                <img src="https://placehold.co/600x400/000/2c5234?text=Neural+Scan" alt="Neural Link">
+                <img src="https://thumbs.dreamstime.com/b/system-cyberpunk-style-ray-medical-ai-illustration-futuristic-neon-technology-innovtion-robotics-digitl-405536833.jpg" alt="Glitch Art">
             </div>
 
-            <h2>The Resonant Ghost</h2>
-            <p><strong>The Belief:</strong> "Digital Psychosis" / Viral Contagion.</p>
+            <h2>The Haptic Echo</h2>
+            <p><strong>The Belief:</strong> "Somatic Ghosting" - Patients feel burning pain in organs removed decades ago.</p>
             <div class="diagnosis-box">
-                <p><strong>Reality:</strong> Cloud caching error.</p>
+                <p><strong>Reality:</strong> Cloud synchronization error in legacy medical servers.</p>
             </div>
             <span class="click-hint">Click to Inspect Case [+]</span>
 
             <div class="extended-details">
-                <h3>System Log: 2084-Beta</h3>
-                <p>The AI diagnostics flagged neural feedback loops as a pathogen. It was actually the brain adapting to a new Cortex-Link update.</p>
-                <p><strong>Result:</strong> 12,000 citizens quarantined in Faraday cages. When the tool becomes the master, the outlier becomes the enemy.</p>
+                <h3>System Log: 2088-Omega</h3>
+                <p><strong>The Incident:</strong> Millions of elderly patients with neural implants reported identical, specific pains in their left arm. Doctors diagnosed "Mass Psychogenic Illness" and prescribed heavy sedatives.</p>
+                <p><strong>The Glitch:</strong> A legacy server update accidentally synced a single "pain file" from a physiotherapy simulation into the live neural feeds of the entire geriatric network. We treated the patients' minds when we should have debugged the network's memory.</p>
             </div>
         </article>
     </div>
@@ -426,11 +451,13 @@
 
 <footer>
     <p style="color: #666;">© 2025 Museum of Medical Misinterpretations</p>
+    <p style="font-size: 0.8rem; color: var(--washu-red); margin-top: 10px;">Created by Rick Rong</p>
 </footer>
 
 <div id="infoModal" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal-content">
         <button class="close-btn" onclick="toggleModal()">&times;</button>
+        <img id="modalImage" src="" alt="Expanded Exhibit Image">
         <h2 id="modalTitle"></h2>
         <div id="modalBody"></div>
     </div>
@@ -450,17 +477,24 @@
     // Modal Logic
     const modal = document.getElementById('infoModal');
     const modalContent = document.querySelector('.modal-content');
+    const modalImage = document.getElementById('modalImage');
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
 
     function openModal(element) {
+        // 1. Get Text Content
         const title = element.querySelector('h2').innerText;
         const extendedContent = element.querySelector('.extended-details').innerHTML;
         
+        // 2. Get Image Source
+        const imgSrc = element.querySelector('.image-slot img').src;
+        
+        // 3. Update Modal DOM
         modalTitle.innerText = title;
         modalBody.innerHTML = extendedContent;
+        modalImage.src = imgSrc;
         
-        // Dynamic Border color for Future case
+        // 4. Dynamic Styling for Future Case
         if (element.classList.contains('fictional-case')) {
             modalContent.style.borderColor = '#2c5234'; 
             modalContent.querySelector('h2').style.color = '#2c5234';
